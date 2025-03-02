@@ -21,9 +21,15 @@ class SubjectDetailsView extends GetView<SubjectDetailsController> {
         title: Text(chapter),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text("data"),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return ExpansionTile(title: Text("Title Here"));
+              }),
+        ),
       ),
       // body: EasyStepper(
       //   activeStep: activeStep,
