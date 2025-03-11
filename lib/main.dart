@@ -27,16 +27,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp>with WidgetsBindingObserver {
   final OnboardingController _onBoardController =
       Get.put(OnboardingController());
-
-  // todo
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this); // Observe app lifecycle changes
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _onBoardController.requestCameraPermission();
-    });
-  }
+  //
+  // // todo
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   WidgetsBinding.instance.addObserver(this); // Observe app lifecycle changes
+  //   WidgetsBinding.instance.addPostFrameCallback((_) {
+  //     _onBoardController.requestCameraPermission();
+  //   });
+  // }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
