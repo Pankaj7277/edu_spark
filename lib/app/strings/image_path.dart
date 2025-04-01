@@ -1,5 +1,6 @@
 class ImagePath{
 
+  //common
   static const emoji = "assets/emoji.png";
   static const sparkLogo = "assets/spark_logo.png";
   static const whatsapp = "assets/WhatsApp.png";
