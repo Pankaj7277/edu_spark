@@ -15,14 +15,14 @@ class ChatCard extends StatelessWidget {
         Stack(
           children: [
             BubbleSpecialThree(
-              text: this.message,
+              text: message,
               tail: true,
               color: Colors.black12,
               isSender: true,
               textStyle: TextStyle(fontSize: 14.35.sp),
             ),
             BubbleSpecialThree(
-              text: this.message,
+              text: message,
               tail: true,
               color: Colors.white,
               isSender: true,

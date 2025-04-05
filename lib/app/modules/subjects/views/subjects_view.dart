@@ -64,7 +64,7 @@ class SubjectsView extends GetView<SubjectsController> {
                       ),
                       trailing: Icon(Icons.arrow_right),
                       title: Text("Chapter ${index + 1}", style: TextStyle(fontWeight: FontWeight.w600),),
-                      subtitle: Text("Topics: ${allIndices }",style: TextStyle(color: AppColors.black54),),
+                      subtitle: Text("Topics: $allIndices ",style: TextStyle(color: AppColors.black54),),
                       onTap: (){
                         Get.to(SubjectDetailsView(chapter:"Chapter ${index + 1}" ));
                       },
