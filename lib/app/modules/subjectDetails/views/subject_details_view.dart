@@ -14,7 +14,7 @@ class SubjectDetailsView extends GetView<SubjectDetailsController> {
   final int upperBound = 5;
   final double progress = 0.2;
   final double lineLength = 10;
-  final  Set<int> reachedSteps = <int>{0, 2, 4, 5};
+  final Set<int> reachedSteps = <int>{0, 2, 4, 5};
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,8 @@ class SubjectDetailsView extends GetView<SubjectDetailsController> {
               SizedBox(
                 height: 100.h,
                 width: double.infinity,
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dummy Text"),
+                child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dummy Text"),
               ),
               Expanded(
                 child: ListView.builder(

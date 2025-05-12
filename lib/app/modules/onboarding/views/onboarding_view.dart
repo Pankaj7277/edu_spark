@@ -39,10 +39,14 @@ class OnboardingView extends GetView<OnboardingController> {
                     top: -180.h,
                     right: 180.w,
                     child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,color: Colors.amber.shade100.withOpacity(0.75),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber.shade100.withOpacity(0.75),
+                      ),
+                      height: 200.h,
+                      width: 200.w,
                     ),
-                    height :200.h, width:200.w,),),
+                  ),
                   Lottie.asset(
                     'assets/sparkl_shape_shift_lottie.json',
                     height: 300.h,
@@ -86,6 +90,7 @@ class OnboardingView extends GetView<OnboardingController> {
       ),
     );
   }
+
   Widget header() {
     return SizedBox(
       height: double.infinity,
@@ -345,7 +350,7 @@ class OnboardingView extends GetView<OnboardingController> {
                         ? 50.w
                         : 0, // Shrink size when moved
                     child: CustomVideoPlayer(
-                      videoPath:  ImagePath.teacherVideo,
+                      videoPath: ImagePath.teacherVideo,
                       isCircular: true,
                     ),
                   ),
@@ -408,7 +413,7 @@ class OnboardingView extends GetView<OnboardingController> {
                                             CircularProgressIndicator()), // Loading indicator until camera initializes
                               )
                             : CustomVideoPlayer(
-                                videoPath:  ImagePath.studentVideo,
+                                videoPath: ImagePath.studentVideo,
                                 isCircular: true,
                               ),
                       ),
@@ -430,7 +435,7 @@ class OnboardingView extends GetView<OnboardingController> {
                           curve: Curves.ease,
                           duration: Duration(seconds: 1),
                           child: roundedImgBox(
-                              imagePath:  ImagePath.blueBook,
+                              imagePath: ImagePath.blueBook,
                               height: 50.h,
                               width: 50.w),
                         )),
@@ -443,7 +448,7 @@ class OnboardingView extends GetView<OnboardingController> {
                           curve: Curves.ease,
                           duration: Duration(seconds: 1),
                           child: roundedImgBox(
-                              imagePath:  ImagePath.preReadSelected,
+                              imagePath: ImagePath.preReadSelected,
                               height: 30.h,
                               width: 30.w),
                         )),
@@ -492,7 +497,7 @@ class OnboardingView extends GetView<OnboardingController> {
                           curve: Curves.ease,
                           duration: Duration(seconds: 1),
                           child: roundedImgBox(
-                              imagePath:  ImagePath.emoji,
+                              imagePath: ImagePath.emoji,
                               height: 40.h,
                               width: 40.w),
                         )),
@@ -522,7 +527,7 @@ class OnboardingView extends GetView<OnboardingController> {
                   if (_onBoardController.count < 3) {
                     _onBoardController.increment();
                     _onBoardController.incrementProgress();
-                  }else{
+                  } else {
                     Get.offAll(HomeView());
                   }
                 },

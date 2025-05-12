@@ -286,7 +286,7 @@ class HomeView extends GetView<HomeController> {
                                         _homeController.booksInfo[index]
                                             ["title"],
                                         style: TextStyle(
-                                          // fontWeight: FontWeight.w500,
+                                            // fontWeight: FontWeight.w500,
                                             color: AppColors.black,
                                             fontSize: 12.sp),
                                       ),
