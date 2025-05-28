@@ -3,9 +3,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:camera/camera.dart';
 
 class OnboardingController extends GetxController {
-
   final count = 1.obs;
-  final progress = (1/3).obs;
+  final progress = (1 / 3).obs;
   RxBool isPermissionGranted = false.obs;
   CameraController? cameraController;
   late List<CameraDescription> cameras;
@@ -13,8 +12,8 @@ class OnboardingController extends GetxController {
   void increment() => count.value++;
   void decrement() => count.value--;
 
-  void incrementProgress() => progress + (1/3);
-  void decrementProgress() => progress - (1/3);
+  void incrementProgress() => progress + (1 / 3);
+  void decrementProgress() => progress - (1 / 3);
 
   //camera permission-----------------------------------------
   Future<void> requestCameraPermission() async {
@@ -37,7 +36,6 @@ class OnboardingController extends GetxController {
     }
   }
 
-
   final List<Map<String, dynamic>> dataInfo = [
     {
       "title": "Learning Made \nPersonal",
@@ -49,5 +47,4 @@ class OnboardingController extends GetxController {
     },
     {"title": "Doubt Resolution \nwith Teachers", "subtitle": ""}
   ];
-
 }

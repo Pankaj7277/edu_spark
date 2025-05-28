@@ -18,14 +18,15 @@ class SubjectsView extends GetView<SubjectsController> {
         child: Column(
           children: [
             Padding(
-              padding:  EdgeInsets.all(12.w),
+              padding: EdgeInsets.all(12.w),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                      style: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.w600),
                     ),
                   ),
                   Hero(
@@ -36,7 +37,7 @@ class SubjectsView extends GetView<SubjectsController> {
               ),
             ),
             Padding(
-              padding:  EdgeInsets.all(12.w),
+              padding: EdgeInsets.all(12.w),
               child: ListView.separated(
                   shrinkWrap: true,
                   itemCount: 10,
@@ -49,7 +50,9 @@ class SubjectsView extends GetView<SubjectsController> {
                     );
                   },
                   itemBuilder: (context, index) {
-                    String allIndices = List.generate(index +2, (i) => i.toString()).join(", ");
+                    String allIndices =
+                        List.generate(index + 2, (i) => i.toString())
+                            .join(", ");
                     return ListTile(
                       dense: true,
                       contentPadding: EdgeInsets.zero,
@@ -63,10 +66,17 @@ class SubjectsView extends GetView<SubjectsController> {
                         ),
                       ),
                       trailing: Icon(Icons.arrow_right),
-                      title: Text("Chapter ${index + 1}", style: TextStyle(fontWeight: FontWeight.w600),),
-                      subtitle: Text("Topics: $allIndices ",style: TextStyle(color: AppColors.black54),),
-                      onTap: (){
-                        Get.to(SubjectDetailsView(chapter:"Chapter ${index + 1}" ));
+                      title: Text(
+                        "Chapter ${index + 1}",
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                      subtitle: Text(
+                        "Topics: $allIndices ",
+                        style: TextStyle(color: AppColors.black54),
+                      ),
+                      onTap: () {
+                        Get.to(SubjectDetailsView(
+                            chapter: "Chapter ${index + 1}"));
                       },
                     );
                   }),
